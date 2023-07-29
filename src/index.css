@@ -11,3 +11,130 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+/* CSS for the Navigation Bar */
+#navbar {
+  background-color: #007bff;
+  padding: 10px;
+}
+
+#navbar ul {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0;
+  padding: 0;
+}
+
+#navbar li {
+  margin: 0 15px;
+}
+
+#navbar li:first-child {
+  margin-left: 0;
+}
+
+#navbar li:last-child {
+  margin-right: 0;
+}
+
+#navbar a {
+  text-decoration: none;
+  color: #fff;
+  font-size: 18px;
+  font-weight: bold;
+  padding: 5px 10px;
+  border-radius: 5px;
+}
+
+#navbar a:hover {
+  background-color: #0056b3;
+}
+
+
+/* CSS for the Login Form */
+.login {
+  max-width: 400px;
+  margin: 0 auto;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.login p {
+  font-size: 24px;
+  font-weight: bold;
+  text-align: center;
+}
+
+.login h2 {
+  font-size: 18px;
+  margin-bottom: 20px;
+}
+
+.login label {
+  display: block;
+  font-size: 16px;
+  margin-bottom: 5px;
+}
+
+.login input[type='text'],
+.login input[type='password'] {
+  width: 100%;
+  padding: 10px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  margin-bottom: 15px;
+}
+
+.login button {
+  width: 90%;
+  padding: 10px;
+  font-size: 18px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.login button:hover {
+  background-color: #0056b3;
+}
+
+
+/* CSS for the Profile Page */
+.profile {
+  max-width: 400px;
+  margin: 0 auto;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+.profile h2 {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 15px;
+}
+
+.profile img {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  margin-bottom: 15px;
+}
+
+.profile p {
+  font-size: 16px;
+  margin-bottom: 10px;
+}
+
+.profile p:first-of-type {
+  margin-top: 10px;
+}

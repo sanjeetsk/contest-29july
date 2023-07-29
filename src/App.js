@@ -15,7 +15,7 @@ const App = () => {
     <Provider store={store}>
       <Router>
         <div>
-          <nav>
+          <nav id='navbar'>
             <ul>
               <li>
                 <Link to="/">Login</Link>
