@@ -7,6 +7,7 @@ import { useNavigate } from 'react-router-dom';
 const Login = () => {
     const [username, setUsername] = useState('');
     const [password, setPassword] = useState('');
+    const [error, setError] = useState(null); // Add error state
     const dispatch = useDispatch();
     const navigate = useNavigate();
 
@@ -24,23 +25,21 @@ const Login = () => {
         })
             .then((res) => {
                 if (!res.ok) {
+                    setError("Please enter valid userName or Password ");
                     throw new Error('Network response was not ok');
                 }
                 return res.json();
             })
             .then((data) => {
-                console.log(data);
-                // if (data.status === 200) {
+                if (data) {
                 // Login successful, save user details to Redux state
-                console.log(data);
-                dispatch(saveUserDetails(data));
+                    dispatch(saveUserDetails(data));
+                    navigate('/profile');
                 // Redirect the user to the profile page
-                // (You can use a routing library like react-router-dom for this)
-                // } else {
+                } else {
                 // Show the error from the API in the frontend
-                //   console.log(data.error);
-                // }
-                navigate('/profile');
+                  setError(data.error);
+                }
             })
             .catch((error) => {
                 console.error('Error during login:', error.message);
@@ -70,6 +69,7 @@ const Login = () => {
             />
             <br></br>
             <button type='submit'>Log In</button>
+            <div className="error">{(error && error)}</div>
         </form>
     );
 };

@@ -82,7 +82,7 @@ code {
 
 .login input[type='text'],
 .login input[type='password'] {
-  width: 100%;
+  width: 95%;
   padding: 10px;
   font-size: 16px;
   border: 1px solid #ccc;
@@ -91,7 +91,7 @@ code {
 }
 
 .login button {
-  width: 90%;
+  width: 100%;
   padding: 10px;
   font-size: 18px;
   background-color: #007bff;
@@ -103,6 +103,14 @@ code {
 
 .login button:hover {
   background-color: #0056b3;
+}
+
+.error{
+  text-align: center;
+  height: 15px;
+  margin-top: 10px;
+  color: red;
+  font-size: small;
 }
 
 
