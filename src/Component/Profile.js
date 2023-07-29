@@ -24,17 +24,25 @@ const Profile = () => {
                 .catch((error) => {
                     console.error('Error fetching user details:', error);
                 });
-        }
-    }, [userDetails, dispatch]);
+        };
+    }, [userDetails, dispatch, navigate]);
+
 
     return (
-        <div className='profile'>
-            <h2>User Profile</h2>
-            <img src={userDetails.image} alt='user'></img>
-            <p>Username: {userDetails.username}</p>
-            <p>Email: {userDetails.email}</p>
-            <p>Name: {userDetails.firstName} {userDetails.lastName}</p>
-            <p>Gender: {userDetails.gender}</p>
+        <div>
+            {userDetails ? (
+                <div className='profile'>
+                    <h2>User Profile</h2>
+                    <img src={userDetails.image} alt='user'></img>
+                    <p>Username: {userDetails.username}</p>
+                    <p>Email: {userDetails.email}</p>
+                    <p>Name: {userDetails.firstName} {userDetails.lastName}</p>
+                    <p>Gender: {userDetails.gender}</p>
+                </div>
+
+            ) : (
+                <p>Loading...</p>
+            )}
         </div>
     );
 };
